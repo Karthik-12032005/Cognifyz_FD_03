@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | Premium E-Commerce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header py-3">
+    <nav class="navbar navbar-expand-xl navbar-dark container align-items-center">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+            <span class="brand-mark">S</span>
+            <span class="ms-2">ShopEase</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-actions d-flex align-items-center gap-3">
+            <button class="btn btn-outline-light btn-sm cart-btn position-relative" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="bi bi-cart3"></i>
+                <span class="cart-label d-none d-sm-inline ms-2">Cart</span>
+                <span class="cart-count">0</span>
+            </button>
+            <button id="accountButton" class="btn btn-warning btn-sm px-4" type="button" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-white hero-copy">
+                    <span class="eyebrow">Limited Edition Drops</span>
+                    <h1>Shop the latest premium collections with effortless elegance.</h1>
+                    <p class="lead">Discover curated tech, fashion, and lifestyle essentials with express shipping and exclusive savings.</p>
+                    <div class="d-flex flex-column flex-sm-row align-items-center gap-3 mt-4">
+                        <a href="#products" class="btn btn-warning btn-lg">Start Shopping</a>
+                        <a href="#offers" class="link-light text-decoration-none">See current offers <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="hero-stats mt-5 d-flex flex-wrap gap-3 text-start">
+                        <div class="stat-card p-3">
+                            <strong>124+</strong>
+                            <span>Top brands</span>
+                        </div>
+                        <div class="stat-card p-3">
+                            <strong>15K</strong>
+                            <span>Happy customers</span>
+                        </div>
+                        <div class="stat-card p-3">
+                            <strong>24h</strong>
+                            <span>Fast delivery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="hero-glass p-4">
+                        <div class="hero-image overflow-hidden rounded-4 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Premium products" class="img-fluid">
+                        </div>
+                        <div class="product-highlight mt-4 text-white">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <p class="mb-1 text-uppercase text-muted small">Trending now</p>
+                                    <h4 class="mb-0">Aurora Smartwatch</h4>
+                                </div>
+                                <span class="badge bg-warning text-dark">Sale 20%</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price display-6 fw-bold">$179</span>
+                                <button class="btn btn-outline-light btn-sm add-cart" data-name="Aurora Smartwatch" data-price="179">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section px-3 px-lg-0">
+        <div class="container">
+            <div class="section-header text-center text-white mb-5">
+                <p class="text-warning mb-2">Featured Picks</p>
+                <h2>Explore our premium collection</h2>
+                <p class="mx-auto col-lg-7 text-secondary">Curated products designed for style, performance, and everyday luxury.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <article class="product-card glass-card p-4">
+                        <div class="product-img overflow-hidden rounded-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Smart watch" class="img-fluid">
+                        </div>
+                        <h5>Skyline Smartwatch</h5>
+                        <p class="text-secondary">Elegant wearable tech with health tracking and voice control.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <span class="fw-bold">$149</span>
+                            <button class="btn btn-outline-warning btn-sm buy-btn" data-name="Skyline Smartwatch" data-price="149">Buy Now</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="product-card glass-card p-4">
+                        <div class="product-img overflow-hidden rounded-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Headphones" class="img-fluid">
+                        </div>
+                        <h5>EchoWave Headphones</h5>
+                        <p class="text-secondary">Immersive sound with noise cancellation and premium comfort.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <span class="fw-bold">$89</span>
+                            <button class="btn btn-outline-warning btn-sm buy-btn" data-name="EchoWave Headphones" data-price="89">Buy Now</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="product-card glass-card p-4">
+                        <div class="product-img overflow-hidden rounded-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="Sneakers" class="img-fluid">
+                        </div>
+                        <h5>Nova Runner Sneakers</h5>
+                        <p class="text-secondary">Lightweight trainers crafted for style and urban movement.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <span class="fw-bold">$119</span>
+                            <button class="btn btn-outline-warning btn-sm buy-btn" data-name="Nova Runner Sneakers" data-price="119">Buy Now</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers" class="section section-dark py-5">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-lg-5">
+                    <div class="offer-card glass-card p-5">
+                        <span class="badge bg-warning text-dark mb-3">Exclusive offer</span>
+                        <h3>Season sale — up to 40% off</h3>
+                        <p class="text-secondary">Shop the new arrivals with special offers across electronics, fashion, and accessories.</p>
+                        <ul class="list-unstyled text-white mt-4 offer-list">
+                            <li><i class="bi bi-check2-circle text-warning me-2"></i>Free express delivery</li>
+                            <li><i class="bi bi-check2-circle text-warning me-2"></i>30-day easy returns</li>
+                            <li><i class="bi bi-check2-circle text-warning me-2"></i>Premium packaging</li>
+                        </ul>
+                        <a href="#products" class="btn btn-warning mt-4">Grab this deal</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="mini-card glass-card p-4">
+                                <span class="badge bg-opacity-25 bg-warning text-warning mb-3">New arrival</span>
+                                <h5>Wireless Earbuds</h5>
+                                <p class="text-secondary">Crystal clear audio with active noise control.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mini-card glass-card p-4">
+                                <span class="badge bg-opacity-25 bg-warning text-warning mb-3">Limited drop</span>
+                                <h5>Leather Backpack</h5>
+                                <p class="text-secondary">Sophisticated carry-on with smart compartments.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mini-card glass-card p-4">
+                                <span class="badge bg-opacity-25 bg-warning text-warning mb-3">Best seller</span>
+                                <h5>Designer Sunglasses</h5>
+                                <p class="text-secondary">Bold style with UV protection and premium finish.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mini-card glass-card p-4">
+                                <span class="badge bg-opacity-25 bg-warning text-warning mb-3">Editor's pick</span>
+                                <h5>Smart Home Hub</h5>
+                                <p class="text-secondary">Control with voice and phone from anywhere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section py-5">
+        <div class="container">
+            <div class="section-header text-center text-white mb-5">
+                <p class="text-warning mb-2">Customer Love</p>
+                <h2>What shoppers are saying</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card glass-card p-4 h-100">
+                        <p class="text-secondary">"The shopping experience felt premium from start to finish. Fast delivery and absolute quality."</p>
+                        <div class="mt-4 d-flex align-items-center gap-3">
+                            <div class="avatar bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center">A</div>
+                            <div>
+                                <strong>Amy Richards</strong>
+                                <p class="mb-0 text-muted small">Fashion Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card glass-card p-4 h-100">
+                        <p class="text-secondary">"Their collection is next-level. The site feels modern, and the checkout was seamless."</p>
+                        <div class="mt-4 d-flex align-items-center gap-3">
+                            <div class="avatar bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center">J</div>
+                            <div>
+                                <strong>Jordan Lee</strong>
+                                <p class="mb-0 text-muted small">Tech Collector</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card glass-card p-4 h-100">
+                        <p class="text-secondary">"Everything looked premium and polished. I felt confident placing my order instantly."</p>
+                        <div class="mt-4 d-flex align-items-center gap-3">
+                            <div class="avatar bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center">S</div>
+                            <div>
+                                <strong>Sam Carter</strong>
+                                <p class="mb-0 text-muted small">Lifestyle Curator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-dark py-5">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6">
+                    <div class="glass-card p-5 contact-panel">
+                        <span class="text-warning">Need help?</span>
+                        <h3>Contact our support team</h3>
+                        <p class="text-secondary">Our customer specialists are available 24/7 to help you with orders, returns, or product advice.</p>
+                        <div class="contact-info mt-4">
+                            <p><i class="bi bi-telephone-fill me-2 text-warning"></i>+1 (800) 555-0199</p>
+                            <p><i class="bi bi-envelope-fill me-2 text-warning"></i>support@shopease.com</p>
+                            <p><i class="bi bi-geo-alt-fill me-2 text-warning"></i>1060 Market Street, San Francisco</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form id="contactForm" class="glass-card p-5 contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label text-white">Name</label>
+                            <input type="text" class="form-control form-control-dark" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-white">Email</label>
+                            <input type="email" class="form-control form-control-dark" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label text-white">Message</label>
+                            <textarea class="form-control form-control-dark" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning px-5">Send Message</button>
+                        <p id="formFeedback" class="mt-3 text-success d-none">Thanks for reaching out! We'll respond soon.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-secondary">
+        <p class="mb-0">© 2026 ShopEase. Crafted for premium online retail experiences.</p>
+        <div class="footer-links d-flex gap-4">
+            <a href="#home" class="text-secondary text-decoration-none">Home</a>
+            <a href="#products" class="text-secondary text-decoration-none">Products</a>
+            <a href="#contact" class="text-secondary text-decoration-none">Support</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Sign In Modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-0">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="signInModalLabel">Sign In to ShopEase</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm">
+                    <div class="mb-3">
+                        <label for="signinName" class="form-label">Name</label>
+                        <input type="text" class="form-control form-control-dark" id="signinName" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signinEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control form-control-dark" id="signinEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signinPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control form-control-dark" id="signinPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">Sign In</button>
+                </form>
+                <p id="signInFeedback" class="mt-3 text-success d-none">Welcome back! You are signed in successfully.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white border-0">
+            <div class="modal-header border-0">
+                <div>
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <p class="mb-0 text-secondary">Items in cart: <span id="cartItemTotal">0</span></p>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItemsList" class="list-group mb-4"></div>
+                <div class="d-flex justify-content-between align-items-center border-top pt-3 text-white">
+                    <strong>Total</strong>
+                    <span id="cartValueTotal">$0</span>
+                </div>
+                <div id="cartOrderFeedback" class="mt-3 text-success d-none">Order placed successfully! Thank you for shopping with ShopEase.</div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Continue Shopping</button>
+                <button type="button" class="btn btn-warning" id="placeOrderBtn">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
